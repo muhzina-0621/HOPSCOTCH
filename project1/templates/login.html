@@ -1,0 +1,268 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Login</title>
+    <!--/google-fonts -->
+    <link href="//fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap" rel="stylesheet">
+    <!--//google-fonts -->
+    <!--/Template-CSS -->
+    <link rel="stylesheet" href="{% static 'assets/css/style-starter.css' %}">
+    <!--//Template-CSS -->
+</head>
+
+<body>
+    <!--/Header-->
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light stroke py-lg-0">
+                <h1><a class="navbar-brand" href="index.html">
+                        <span class="w3yellow">HOP</span>SCOTCH
+                    </a></h1>
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+                    <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav mx-lg-auto my-2 my-lg-0 navbar-nav-scroll">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/login">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/register">Registration</a>
+                        </li>
+                    </ul>
+                    <!--/search-right-->
+                    <ul class="header-search me-lg-4">
+                        <li class="nav-item search-right">
+                            <a href="#search" class="btn search-btn btn-primary" title="search"><span
+                                    class="fas fa-search me-2" aria-hidden="true"></span> Search</a>
+                            <!-- search popup -->
+                            <div id="search" class="pop-overlay">
+                                <div class="popup">
+                                    <h3 class="title-w3l two mb-4 text-left">Search Here</h3>
+                                    <form action="#" method="GET" class="search-box d-flex position-relative">
+                                        <input type="search" placeholder="Enter Keyword here" name="search"
+                                            required="required" autofocus="">
+                                        <button type="submit" class="btn"><span class="fas fa-search"
+                                                aria-hidden="true"></span></button>
+                                    </form>
+                                </div>
+                                <a class="close" href="#close"></a>
+                            </div>
+                            <!-- /search popup -->
+                        </li>
+                    </ul>
+                    <!--//search-right-->
+                </div>
+                <!-- toggle switch for light and dark theme -->
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="gg-moon"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+                <!-- //toggle switch for light and dark theme -->
+
+            </nav>
+        </div>
+    </header>
+    <!--//Header-->
+    <!--/inner-page-->
+    <div class="inner-banner py-5">
+        <section class="w3l-breadcrumb text-left py-sm-5 ">
+            <div class="container">
+                <div class="w3breadcrumb-gids">
+                    <div class="w3breadcrumb-left text-left">
+                        <h2 class="inner-w3-title mt-lg-5 mt-4">
+                            Login </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+    </div>
+    <!--//inner-page-->
+    <!-- contacts-5-grid -->
+    <div class="w3l-contact-10 py-5" id="contact">
+        <div class="form-41-mian pt-md-5 pt-3">
+            <div class="container">
+                <div class="row contacts-5-grid-main mb-5">
+
+
+                    <div class="col-lg-8 form-inner-cont mt-lg-0 mt-4" style="margin-left: 500px;">
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="form-grids">
+                                <div class="form-input">
+                                    <input type="email" name="Email" id="w3lName" placeholder="Enter your mail id *"
+                                        required="" />
+                                </div><br>
+                                <div class="form-input">
+                                    <input type="text" name="Password" id="w3lSender"
+                                        placeholder="Enter your password * " required />
+                                </div>
+
+                            </div><br><br>
+
+                            <div class="w3-submit text-right" style="margin-right: 20%;">
+                                <button class="btn btn-style btn-primary">Submit <i
+                                        class="fas fa-paper-plane ms-2"></i></button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //contacts-5-grid -->
+    </div>
+
+    <!--/footer-->
+    <footer class="w3l-footer">
+        <div class="w3l-footer-16 py-5">
+            <div class="container py-md-5 py-3 pb-0">
+                <div class="row footer-p right-side">
+                    <div class="col-lg-4 col-md-6 pe-lg-5">
+                        <h2 class="footerw3l-logo"><a class="navbar-brand" href="index.html">
+                                <span class="w3yellow">HOP</span> SCOTCH
+                            </a></h2>
+                        <!-- <p class="mt-3">Lorem ipsum dolor sit, amet consectetur elit. Earum mollitia ipsam autem ipsam.dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam.</p> -->
+                        <div class="columns-2 mt-lg-5 mt-4">
+                            <ul class="social">
+                                <li><a href="#facebook"><i class="fab fa-facebook-f"></i></a>
+                                </li>
+                                <li><a href="#linkedin"><i class="fab fa-linkedin-in"></i></a>
+                                </li>
+                                <li><a href="#twitter"><i class="fab fa-twitter"></i></a>
+                                </li>
+                                <li><a href="#google"><i class="fab fa-google-plus-g"></i></a>
+                                </li>
+
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 mt-lg-0 mt-5">
+                        <div class="row">
+                            <div class="col-xl-5 col-6 column">
+                                <h3>Links</h3>
+                                <ul class="footer-gd-16">
+                                    <li><a href="about.html">About Us</a></li>
+                                    <li><a href="services.html">Services</a></li>
+
+                                    <li><a href="about.html">Team</a></li>
+                                    <li><a href="#blog">Blog Posts</a></li>
+                                    <li><a href="contact.html">Contact Us</a></li>
+                                </ul>
+                            </div>
+                            <div class="col-6 column">
+                                <h3>Services</h3>
+                                <ul class="footer-gd-16">
+
+                                    <li><a href="#care">
+                                            Teacher's Questionnaire</a></li>
+                                    <li><a href="#meal">Student's Questionnaire</a></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+    </footer>
+    <!-- //footer -->
+
+    <!-- Js scripts -->
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+        <span class="fas fa-arrow-up" aria-hidden="true"></span>
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+
+    </script>
+    <!-- //move top -->
+    <!--//footer-9 -->
+    <!-- Template JavaScript -->
+    <script src="{% static 'assets/js/jquery-3.3.1.min.js' %}"></script>
+    <script src="{% static 'assets/js/theme-change.js' %}"></script>
+
+    <!-- MENU-JS -->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+
+    </script>
+    <!-- //MENU-JS -->
+
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+
+    </script>
+    <!-- //disable body scroll which navbar is in active -->
+    <!-- //bootstrap -->
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+
+</body>
+
+</html>
